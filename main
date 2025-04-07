@@ -1,0 +1,93 @@
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Github, Linkedin } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-white text-gray-800 px-8 py-12 md:px-24">
+      <header className="mb-16">
+        <h1 className="text-4xl font-bold mb-2">Pragati Khekale</h1>
+        <p className="text-lg text-gray-600">
+          Data Scientist | Machine Learning Engineer | Geospatial Analyst
+        </p>
+        <div className="flex space-x-4 mt-4">
+          <a href="https://github.com/Pragati2" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline"><Github className="mr-2" /> GitHub</Button>
+          </a>
+          <a href="https://linkedin.com/in/pragati-khekale" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline"><Linkedin className="mr-2" /> LinkedIn</Button>
+          </a>
+        </div>
+      </header>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+        <p className="text-gray-600">
+          I am a data scientist with a passion for using machine learning, Python, and geospatial analytics to solve complex real-world problems. With experience at Atmos Energy, I’ve built ETL pipelines, Tableau dashboards, and predictive models to drive insights across pipeline safety and operations.
+        </p>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
+        <ul className="list-disc list-inside text-gray-600">
+          <li>Languages: Python, SQL, JavaScript</li>
+          <li>Frameworks/Libraries: Pandas, Scikit-learn, PyTorch, React</li>
+          <li>Tools: Tableau, ArcGIS Pro, Git, AWS S3/EC2, Jupyter</li>
+          <li>ML/DS: Deep Learning, Geospatial Analytics, ETL, Time Series Forecasting</li>
+        </ul>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-4">Blog</h2>
+        <Card>
+          <CardContent className="p-4">
+            <h3 className="text-xl font-semibold">Coming Soon: ML for Unlocatable Pipelines</h3>
+            <p className="text-gray-600">
+              I’ll be writing about how I built a prediction model in ArcGIS Pro to forecast pipeline locations using KNN and neural networks.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-semibold">Oral Cancer Detection</h3>
+              <p className="text-gray-600 mb-2">
+                Deep learning model (VGG-16) trained on X-ray data to detect oral cancer with 91% accuracy. Used transfer learning and optimization for faster inference.
+              </p>
+              <a href="https://github.com/Pragati2/Oral-Cancer-Detection-using-Machine-Learning" className="text-blue-600" target="_blank">View on GitHub</a>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-semibold">Geospatial Prediction Model</h3>
+              <p className="text-gray-600 mb-2">
+                Built a KNN + deep learning model in ArcGIS Pro to predict coordinates for unlocatable pipeline tickets, reducing resolution time by 40%.
+              </p>
+              <a href="#" className="text-blue-600">Coming Soon</a>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-4">Resume</h2>
+        <p className="text-gray-600 mb-2">Download my latest resume in PDF format:</p>
+        <a href="/Pragati_Khekale_Resume.pdf" download>
+          <Button>Download Resume</Button>
+        </a>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+        <p className="text-gray-600">📧 khekalepragati01@gmail.com</p>
+        <p className="text-gray-600">📍 Dallas, TX</p>
+      </section>
+    </div>
+  );
+}
