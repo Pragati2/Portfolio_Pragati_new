@@ -6,6 +6,15 @@ import { Github, Linkedin } from "lucide-react";
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white text-gray-800 px-8 py-12 md:px-24">
+      <nav className="flex space-x-6 mb-12 text-sm font-medium text-blue-700">
+        <a href="#about" className="hover:underline">About</a>
+        <a href="#skills" className="hover:underline">Skills</a>
+        <a href="#blog" className="hover:underline">Blog</a>
+        <a href="#projects" className="hover:underline">Projects</a>
+        <a href="#resume" className="hover:underline">Resume</a>
+        <a href="#contact" className="hover:underline">Contact</a>
+      </nav>
+
       <header className="mb-16">
         <h1 className="text-4xl font-bold mb-2">Pragati Khekale</h1>
         <p className="text-lg text-gray-600">
@@ -21,14 +30,14 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <section className="mb-16">
+      <section id="about" className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <p className="text-gray-600">
           I am a data scientist with a passion for using machine learning, Python, and geospatial analytics to solve complex real-world problems. With experience at Atmos Energy, I’ve built ETL pipelines, Tableau dashboards, and predictive models to drive insights across pipeline safety and operations.
         </p>
       </section>
 
-      <section className="mb-16">
+      <section id="skills" className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">Skills</h2>
         <ul className="list-disc list-inside text-gray-600">
           <li>Languages: Python, SQL, JavaScript</li>
@@ -38,7 +47,7 @@ export default function Portfolio() {
         </ul>
       </section>
 
-      <section className="mb-16">
+      <section id="blog" className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">Blog</h2>
         <Card>
           <CardContent className="p-4">
@@ -50,7 +59,7 @@ export default function Portfolio() {
         </Card>
       </section>
 
-      <section className="mb-16">
+      <section id="projects" className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <Card>
@@ -75,7 +84,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="mb-16">
+      <section id="resume" className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">Resume</h2>
         <p className="text-gray-600 mb-2">Download my latest resume in PDF format:</p>
         <a href="/Pragati_Khekale_Resume.pdf" download>
@@ -83,7 +92,7 @@ export default function Portfolio() {
         </a>
       </section>
 
-      <section>
+      <section id="contact">
         <h2 className="text-2xl font-semibold mb-4">Contact</h2>
         <p className="text-gray-600">📧 khekalepragati01@gmail.com</p>
         <p className="text-gray-600">📍 Dallas, TX</p>
